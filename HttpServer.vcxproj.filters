@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="file_handler.cpp" />
+    <ClCompile Include="json_handler.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="RequestHandlerProviderImp.cpp" />
+    <ClCompile Include="json_wrapper.cpp" />
+    <ClCompile Include="Processor.cpp" />
+    <ClCompile Include="http\connection.cpp">
+      <Filter>http</Filter>
+    </ClCompile>
+    <ClCompile Include="http\header.cpp">
+      <Filter>http</Filter>
+    </ClCompile>
+    <ClCompile Include="http\mime_types.cpp">
+      <Filter>http</Filter>
+    </ClCompile>
+    <ClCompile Include="http\reply.cpp">
+      <Filter>http</Filter>
+    </ClCompile>
+    <ClCompile Include="http\request_dispatcher.cpp">
+      <Filter>http</Filter>
+    </ClCompile>
+    <ClCompile Include="http\server.cpp">
+      <Filter>http</Filter>
+    </ClCompile>
+    <ClCompile Include="Environment.cpp" />
+    <ClCompile Include="http\request.cpp">
+      <Filter>http</Filter>
+    </ClCompile>
+    <ClCompile Include="http\server_property.cpp" />
+    <ClCompile Include="http\request_parser.cpp">
+      <Filter>http</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="file_handler.h" />
+    <ClInclude Include="RequestHandlerProviderImp.h" />
+    <ClInclude Include="json_wrapper.h" />
+    <ClInclude Include="json_handler.h" />
+    <ClInclude Include="Processor.h" />
+    <ClInclude Include="http\connection.h">
+      <Filter>http</Filter>
+    </ClInclude>
+    <ClInclude Include="http\header.h">
+      <Filter>http</Filter>
+    </ClInclude>
+    <ClInclude Include="http\mime_types.h">
+      <Filter>http</Filter>
+    </ClInclude>
+    <ClInclude Include="http\reply.h">
+      <Filter>http</Filter>
+    </ClInclude>
+    <ClInclude Include="http\request.h">
+      <Filter>http</Filter>
+    </ClInclude>
+    <ClInclude Include="http\request_dispatcher.h">
+      <Filter>http</Filter>
+    </ClInclude>
+    <ClInclude Include="http\request_handler.h">
+      <Filter>http</Filter>
+    </ClInclude>
+    <ClInclude Include="http\request_handler_provider.h">
+      <Filter>http</Filter>
+    </ClInclude>
+    <ClInclude Include="http\server.h">
+      <Filter>http</Filter>
+    </ClInclude>
+    <ClInclude Include="Environment.h" />
+    <ClInclude Include="http\server_property.h" />
+    <ClInclude Include="http\request_parser.h">
+      <Filter>http</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="http">
+      <UniqueIdentifier>{97c14079-1f48-47fe-b22e-55ff4387f65e}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
