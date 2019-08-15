@@ -38,6 +38,9 @@ public:
     void start();
 
     ~connection();
+
+    static int total_connection();
+
 private:
     void do_start();
 
@@ -48,6 +51,10 @@ private:
 
     /// Handle completion of a write operation.
     void handle_write(const boost::system::error_code& e);
+
+    void start_timer();
+
+    void cancel_timer();
 
     /// Strand to ensure the connection's handlers are not called concurrently.
     boost::asio::io_context::strand strand_;
@@ -71,6 +78,11 @@ private:
     reply reply_;
 
     boost::asio::deadline_timer timer_;
+
+    /// number of connection
+    static int connection_number_;
+
+    SYSTEMTIME timestamp_;
 };
 
 typedef boost::shared_ptr<connection> connection_ptr;

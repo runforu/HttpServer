@@ -18,14 +18,7 @@ public:
     json_handler() {}
 
 private:
-    boost::property_tree::ptree GetMargin(boost::property_tree::ptree pt);
-    boost::property_tree::ptree OpenOrder(boost::property_tree::ptree pt);
-    boost::property_tree::ptree AddOrder(boost::property_tree::ptree pt);
-    boost::property_tree::ptree UpdateOrder(boost::property_tree::ptree pt);
-    boost::property_tree::ptree CloseOrder(boost::property_tree::ptree pt);
-    boost::property_tree::ptree Deposit(boost::property_tree::ptree pt);
-    boost::property_tree::ptree GetUserRecord(boost::property_tree::ptree pt);
-    boost::property_tree::ptree UpdateUserRecord(boost::property_tree::ptree pt);
+    boost::property_tree::ptree GetMargin(boost::property_tree::ptree& pt);
 };
 }  // namespace server
 }  // namespace http

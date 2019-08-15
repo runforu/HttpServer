@@ -22,13 +22,7 @@ public:
     header(std::string n, std::string v) : name(n), value(v) {}
     header(const char* n, const char* v) : name(n), value(v) {}
     
-    bool operator==(const header& h) const {
-        return this->name == h.name && this->value == h.value;
-    }
-
 public:
-    static const header json_content_type;
-    static const std::string content_length;
 
     std::string name;
     std::string value;

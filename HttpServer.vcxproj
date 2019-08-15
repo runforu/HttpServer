@@ -124,8 +124,7 @@ copy "$(ProjectDir)\prism.css" "$(ProjectDir)$(Configuration)\"</Command>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <PostBuildEvent>
       <Command>copy "$(ProjectDir)\index.html" "$(ProjectDir)$(Configuration)\"
-copy "$(ProjectDir)\prism.js" "$(ProjectDir)$(Configuration)\"
-copy "$(ProjectDir)\prism.css" "$(ProjectDir)$(Configuration)\"</Command>
+</Command>
     </PostBuildEvent>
     <ClCompile>
       <ExceptionHandling>Sync</ExceptionHandling>

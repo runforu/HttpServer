@@ -21,22 +21,13 @@
 #include "http/server.h"
 
 _CrtMemState s1, s2, s3;
-struct A {
-    A() {
-        
-    }
-    ~A() {
-        
-    }
-};
 
-A a;
 int main(int argc, char* argv[]) {
     _CrtMemCheckpoint(&s1);
     {
         _CrtSetDbgFlag(_CrtSetDbgFlag(_CRTDBG_REPORT_FLAG) | _CRTDBG_LEAK_CHECK_DF);
-        HANDLE hLogFile = CreateFile("c:/memleak.log", GENERIC_WRITE, FILE_SHARE_WRITE | FILE_SHARE_READ, NULL,
-            CREATE_ALWAYS, FILE_ATTRIBUTE_NORMAL, NULL);
+        HANDLE hLogFile = CreateFile("c:/memleak.log", GENERIC_WRITE, FILE_SHARE_WRITE | FILE_SHARE_READ, NULL, CREATE_ALWAYS,
+                                     FILE_ATTRIBUTE_NORMAL, NULL);
         _CrtSetReportMode(_CRT_WARN, _CRTDBG_MODE_FILE);
         _CrtSetReportFile(_CRT_WARN, hLogFile);
     }
@@ -50,10 +41,9 @@ int main(int argc, char* argv[]) {
         }
     }
     Processor::Instance().Shutdown();
-    int *a = new int;
     _CrtMemCheckpoint(&s2);
     _CrtMemDifference(&s3, &s1, &s2);
     _CrtMemDumpStatistics(&s3);
-    _CrtDumpMemoryLeaks();
+    //_CrtDumpMemoryLeaks();
     return 0;
 }

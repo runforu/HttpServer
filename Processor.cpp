@@ -15,7 +15,7 @@ Processor& Processor::Instance() {
 }
 
 void Processor::Initialize() {
-    m_thread = boost::thread(boost::bind(&Processor::StartServer, this, "8080", "4"));
+    m_thread = boost::thread(boost::bind(&Processor::StartServer, this, "8080", "1024"));
 }
 
 void Processor::Shutdown() {
